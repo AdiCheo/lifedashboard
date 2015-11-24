@@ -1,0 +1,12 @@
+{
+    "name": "lifedashboard",
+    "description": "A Dashboard for Your Life",
+    "version": "0.0.0",
+    "author": "adi.cheo@gmail.com",
+    "homepage": "https://github.com/AdiCheo/lifedashboard",
+    "bugs": "https://github.com/AdiCheo/lifedashboard/issues",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AdiCheo/lifedashboard.git"
+    }
+}
