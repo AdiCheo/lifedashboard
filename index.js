@@ -135,13 +135,13 @@ app.post('/login', passport.authenticate('local-signin', {
 
 //logs user out of site, deleting them from the session, and returns to homepage
 app.get('/logout', function(req, res){
-  ensureAuthenticated(req, res);
-  var name = req.user.username;
-  console.log("LOGGIN OUT " + req.user.username)
-  req.logout();
-  res.redirect('/');
-  req.session.notice = "You have successfully been logged out " + name + "!";
-});
+  ensureAuthenticated(req, res, function() {
+    var name = req.user.username;
+    console.log("LOGGIN OUT " + req.user.username)
+    req.logout();
+    res.redirect('/');
+    req.session.notice = "You have successfully been logged out " + name + "!";
+})});
 
 // Simple route middleware to ensure user is authenticated.
 function ensureAuthenticated(req, res, next) {
