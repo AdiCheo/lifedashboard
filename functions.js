@@ -10,7 +10,7 @@ exports.localReg = function (username, password) {
   var user = {
     "username": username,
     "password": hash,
-    "avatar": "http://placepuppy.it/images/homepage/Beagle_puppy_6_weeks.JPG"
+    "avatar": ""
   }
   //check if username is already assigned in our database
   db.get('local-users', username)

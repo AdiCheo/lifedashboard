@@ -153,4 +153,4 @@ function ensureAuthenticated(req, res, next) {
 //===============PORT=================
 var port = process.env.PORT || 5000; //select your port or let it pull from your .env file
 app.listen(port);
-console.log("listening on " + port + "!");
+console.log("listening on " + port);
