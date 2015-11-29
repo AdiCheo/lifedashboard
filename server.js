@@ -16,6 +16,8 @@ var session      = require('express-session');
 
 var configDB = require('./config/database.js');
 
+var graph = require('fbgraph');
+
 // configuration ===============================================================
 mongoose.connect(configDB.url); // connect to our database
 
@@ -30,7 +32,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs'); // set up ejs for templating
 
 // required for passport
-app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+app.use(session({ secret: 'I have a new crazZZYZYYZ secret!!!' })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
